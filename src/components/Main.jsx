@@ -14,6 +14,16 @@ import Avatar3 from "../assets/images/profile-3.jpg";
 import Button from "../components/Button";
 
 const Main = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const input = e.target.querySelector(".main__mailbox__input");
+    if (!/\S+@\S+\.\S+/.test(input.value)) {
+      input.style.border = "3px solid red";
+    } else {
+      input.style.border = "";
+      input.value = "";
+    }
+  };
   return (
     <main className="main">
       <div className="main__cards">
@@ -89,10 +99,17 @@ const Main = () => {
           extremely generous. If you have any questions, our support team would
           be happy to help you.
         </h4>
-        <div className="main__mailbox__inputwrapper">
-          <input type="text" className="main__mailbox__input" />
+        <form
+          type="submit"
+          onSubmit={handleSubmit}
+          className="main__mailbox__inputwrapper">
+          <input
+            type="text"
+            placeholder="Example@gmail.com"
+            className="main__mailbox__input"
+          />
           <Button text="Get Started For Free" width="200px" height="48px" />
-        </div>
+        </form>
       </div>
     </main>
   );
