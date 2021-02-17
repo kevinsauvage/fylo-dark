@@ -1,0 +1,11 @@
+@import "./variables";
+
+body {
+    background-color: $primary-color-main;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,31 @@
+@import "../global";
+@import "../mixins";
+@import "../reset";
+@import "../variables";
+
+.header {
+    height: 52px;
+    margin-top: 73px;
+
+    &__container {
+        @include flex-ai-c-jc-sb;
+    }
+
+    &__logo {
+        width: 176px;
+        height: 52px;
+    }
+
+    &__nav {
+        &__list {
+            @include flex-ai-c-jc-sb;
+
+            &__item {
+                margin-left: 57px;
+                color: $neutral;
+                font-size: $font-size;
+                font-family: $font-family-header;
+            }
+        }
+    }
+}
