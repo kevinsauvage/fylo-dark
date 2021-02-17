@@ -89,10 +89,10 @@ const Main = () => {
           extremely generous. If you have any questions, our support team would
           be happy to help you.
         </h4>
-        <form type="submit" className="main__mailbox__inputwrapper">
+        <div className="main__mailbox__inputwrapper">
           <input type="text" className="main__mailbox__input" />
           <Button text="Get Started For Free" width="200px" height="48px" />
-        </form>
+        </div>
       </div>
     </main>
   );

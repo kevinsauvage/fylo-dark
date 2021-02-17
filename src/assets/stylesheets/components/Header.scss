@@ -25,9 +25,12 @@
                 font-size: $font-size;
                 font-family: $font-family-header;
                 cursor: pointer;
+                font-weight: bold;
+                opacity: 0.5;
+                transition: opacity 0.3s ease-in-out;
 
                 &:hover {
-                    font-weight: bold;
+                    opacity: 1;
                 }
             }
         }
