@@ -10,10 +10,8 @@
     &__container {
         @include flex-ai-c-jc-sb;
     }
-
     &__logo {
-        width: 176px;
-        height: 52px;
+        cursor: pointer;
     }
 
     &__nav {
@@ -25,6 +23,12 @@
                 color: $neutral;
                 font-size: $font-size;
                 font-family: $font-family-header;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    font-weight: bold;
+                }
             }
         }
     }
