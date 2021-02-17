@@ -1,0 +1,51 @@
+@import "../variables";
+@import "../mixins";
+
+.main {
+    background-color: $primary-color-main;
+    padding-top: 75px;
+
+    &__cards {
+        max-width: 880px;
+        min-height: 550px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__banner {
+        margin-top: 58px;
+
+        &__container {
+            @include flex-ai-c-jc-sb
+        }
+
+        &__text {
+            height: 282px;
+            width: 506px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            &__title {
+                font-weight: bold;
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            &__subtitle {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            &__btn {
+                color: $accent-cyan;
+                border-bottom: 1px solid $accent-cyan;
+                width: fit-content;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}

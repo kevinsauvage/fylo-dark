@@ -1,11 +1,16 @@
 @import "./variables";
 
 body {
-    background-color: $primary-color-main;
+    background-color: $primary-color-bg;
+
+}
+
+* {
+    color: $neutral;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }

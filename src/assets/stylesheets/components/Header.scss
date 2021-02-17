@@ -10,6 +10,7 @@
     &__container {
         @include flex-ai-c-jc-sb;
     }
+
     &__logo {
         cursor: pointer;
     }
@@ -23,7 +24,6 @@
                 color: $neutral;
                 font-size: $font-size;
                 font-family: $font-family-header;
-                transition: all 0.3s ease-in-out;
                 cursor: pointer;
 
                 &:hover {

@@ -1,0 +1,22 @@
+@import "../variables";
+
+.card {
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 79px;
+
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        margin: 16px 0 8px 0;
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: normal;
+        font-family: $font-family-body;
+    }
+}
