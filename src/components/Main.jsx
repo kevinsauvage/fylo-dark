@@ -92,9 +92,9 @@ const Main = () => {
           job="Founder & CEO, Huddle"
         />
       </div>
-      <div className="main__mailbox">
-        <h3 className="main__mailbox__title">Get early access today</h3>
-        <h4 className="main__mailbox__subtitle">
+      <div className="mailbox">
+        <h3 className="mailbox__title">Get early access today</h3>
+        <h4 className="mailbox__subtitle">
           It only takes a minute to sign up and our free starter tier is
           extremely generous. If you have any questions, our support team would
           be happy to help you.
@@ -102,11 +102,11 @@ const Main = () => {
         <form
           type="submit"
           onSubmit={handleSubmit}
-          className="main__mailbox__inputwrapper">
+          className="mailbox__inputwrapper">
           <input
             type="text"
             placeholder="Example@gmail.com"
-            className="main__mailbox__input"
+            className="mailbox__input"
           />
           <Button text="Get Started For Free" width="200px" height="48px" />
         </form>
