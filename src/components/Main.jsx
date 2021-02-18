@@ -67,12 +67,8 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="main__testimonial container">
-        <img
-          className="main__testimonial__quote"
-          src={QuoteIcon}
-          alt="quote icon"
-        />
+      <div className="testimonial container">
+        <img className="testimonial__quote" src={QuoteIcon} alt="quote icon" />
         <TestimonialCard
           avatar={Avatar1}
           text="Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine."
