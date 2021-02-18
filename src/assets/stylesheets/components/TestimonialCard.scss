@@ -15,7 +15,6 @@
     @include respond(tablet) {
         margin-bottom: 2rem;
         margin-right: 0;
-
     }
 
     @include respond(mobile) {
@@ -28,7 +27,6 @@
             margin-bottom: 0;
         }
     }
-
 
     &__text {
         font-weight: normal;

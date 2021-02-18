@@ -2,7 +2,6 @@
 @import "../mixins";
 
 .footer {
-
     padding: 169px 81px 53px 81px;
     background-color: $primary-color-footer;
 
@@ -29,8 +28,6 @@
             flex-direction: column;
         }
 
-
-
         &__a {
             width: 379px;
             display: flex;
@@ -47,7 +44,7 @@
                 opacity: 0.5;
 
                 @include respond(tablet) {
-                    margin-bottom: 1rem
+                    margin-bottom: 1rem;
                 }
             }
         }
@@ -86,7 +83,6 @@
                 opacity: 0.5;
                 cursor: pointer;
                 transition: opacity 0.3s ease;
-
             }
 
             &:hover {
@@ -109,6 +105,5 @@
                 margin-right: 0;
             }
         }
-
     }
 }

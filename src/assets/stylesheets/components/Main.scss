@@ -35,7 +35,6 @@
             }
 
             img {
-
                 @include respond(mobile) {
                     height: 230px;
                 }
@@ -60,7 +59,6 @@
                     line-height: 24px;
                     margin-top: 48px;
                 }
-
             }
 
             &__subtitle {
@@ -111,7 +109,6 @@
         top: -40px;
         left: -10px;
         z-index: 1;
-
     }
 }
 
@@ -182,6 +179,7 @@
         color: $primary-color-bg;
         font-size: 1rem;
         padding-left: 1rem;
+        border: none;
 
         @include respond(tablet) {
             width: 80%;
