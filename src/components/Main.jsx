@@ -16,7 +16,7 @@ import Button from "../components/Button";
 const Main = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    const input = e.target.querySelector(".main__mailbox__input");
+    const input = e.target.querySelector(".mailbox__input");
     if (!/\S+@\S+\.\S+/.test(input.value)) {
       input.style.border = "3px solid red";
     } else {
