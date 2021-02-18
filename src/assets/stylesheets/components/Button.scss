@@ -1,7 +1,7 @@
 @import "../variables";
 
 .button {
-    background: linear-gradient(138.1deg, #63E1D9 -49.34%, #34A0CD 100%);
+    background: linear-gradient(138.1deg, $accent-cyan -49.34%, $accent-blue 100%);
     box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
     border-radius: 28px;
     font-weight: bold;
@@ -11,4 +11,9 @@
     border: none;
     cursor: pointer;
     font-family: $font-family-header;
+    transition: background 3s ease-in;
+
+    &:hover {
+        background: linear-gradient(138.1deg, $accent-cyan -49.34%, $accent-cyan 100%);
+    }
 }

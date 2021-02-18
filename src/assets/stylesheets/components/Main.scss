@@ -6,6 +6,10 @@
     padding-top: 75px;
     position: relative;
 
+    @include respond(mobile) {
+        padding-top: 120px;
+    }
+
     &__cards {
         max-width: 880px;
         min-height: 550px;
@@ -13,6 +17,10 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        @include respond(mobile) {
+            justify-content: center;
+        }
     }
 
     &__banner {
@@ -21,6 +29,17 @@
         &__container {
             @include flex-ai-c-jc-sb;
             flex-wrap: wrap;
+
+            @include respond(tablet) {
+                justify-content: center;
+            }
+
+            img {
+
+                @include respond(mobile) {
+                    height: 230px;
+                }
+            }
         }
 
         &__text {
@@ -30,11 +49,19 @@
             justify-content: space-between;
             flex-direction: column;
 
+
+
             &__title {
                 font-weight: bold;
                 font-size: 40px;
                 line-height: 50px;
                 font-family: $font-family-header;
+
+                @include respond(mobile) {
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-top: 48px;
+                }
 
             }
 
@@ -43,6 +70,11 @@
                 font-size: 16px;
                 line-height: 24px;
                 font-family: $font-family-body;
+
+                @include respond(mobile) {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
             }
 
             &__btn {
@@ -52,6 +84,11 @@
                 width: fit-content;
                 padding-bottom: 5px;
                 cursor: pointer;
+
+                @include respond(mobile) {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
             }
         }
     }
@@ -62,18 +99,27 @@
         position: relative;
         margin-top: 120px;
         padding-bottom: 360px;
+        width: fit-content;
+
+        @include respond(tablet) {
+            justify-content: center;
+            flex-direction: column;
+            padding-bottom: 310px;
+        }
 
         &__quote {
             position: absolute;
             top: -40px;
-            left: -20px;
+            left: -10px;
             z-index: 1;
+
         }
     }
 
     &__mailbox {
-        width: 863px;
-        height: 220px;
+        max-width: 863px;
+        width: 100%;
+        min-height: 220px;
         background: $primary-color-bg;
         box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.254274);
         border-radius: 9px;
@@ -85,12 +131,31 @@
         left: 50%;
         transform: translateX(-50%);
 
+        @include respond(tablet) {
+            padding: 39px 24px;
+            width: 90%;
+        }
+
+        &__inputwrapper {
+            @include respond(tablet) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
         &__title {
             font-family: $font-family-header;
             font-weight: bold;
             font-size: 32px;
             line-height: 48px;
             margin-bottom: 16px;
+
+            @include respond(mobile) {
+                font-size: 18px;
+                line-height: 24px;
+            }
         }
 
         &__subtitle {
@@ -99,6 +164,12 @@
             line-height: 21px;
             font-family: $font-family-body;
             padding: 0 95px;
+
+            @include respond(mobile) {
+                padding: 0;
+                margin: 0 auto;
+                max-width: 350px;
+            }
         }
 
         &__input {
@@ -112,6 +183,18 @@
             color: $primary-color-bg;
             font-size: 1rem;
             padding-left: 1rem;
+
+            @include respond(tablet) {
+                width: 80%;
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            @include respond(mobile) {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                max-width: 350px;
+            }
 
             &:focus {
                 outline: none;

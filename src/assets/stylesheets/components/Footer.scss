@@ -6,6 +6,10 @@
     padding: 169px 81px 53px 81px;
     background-color: $primary-color-footer;
 
+    @include respond(mobile) {
+        padding: 200px 24px 75px 24px;
+    }
+
     &__logo {
         width: 100px;
     }
@@ -21,6 +25,11 @@
         font-family: $font-family-body;
         flex-wrap: wrap;
 
+        @include respond(tablet) {
+            flex-direction: column;
+        }
+
+
 
         &__a {
             width: 379px;
@@ -29,9 +38,17 @@
             line-height: 24px;
             font-family: $font-family-body;
 
+            @include respond(tablet) {
+                margin-bottom: 1rem;
+            }
+
             p {
                 margin-left: 1rem;
                 opacity: 0.5;
+
+                @include respond(tablet) {
+                    margin-bottom: 1rem
+                }
             }
         }
 
@@ -40,6 +57,10 @@
                 @include flex-ai-c-jc-sb;
                 width: 200px;
                 margin-bottom: 1rem;
+
+                @include respond(tablet) {
+                    margin-bottom: 2rem;
+                }
 
                 p {
                     opacity: 0.5;
@@ -51,6 +72,11 @@
         &__c {
             display: flex;
 
+            @include respond(tablet) {
+                flex-direction: column;
+                margin-bottom: 2rem;
+            }
+
             &__list:first-child {
                 margin-right: 80px;
             }
@@ -61,9 +87,10 @@
                 cursor: pointer;
                 transition: opacity 0.3s ease;
 
-                &:hover {
-                    opacity: 1;
-                }
+            }
+
+            &:hover {
+                opacity: 1;
             }
         }
 

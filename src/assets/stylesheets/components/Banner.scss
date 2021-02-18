@@ -10,15 +10,26 @@
     width: 100%;
     @include flex-jc-c-ai-c(column);
 
+    @include respond(mobile) {
+        padding: 48px 0 33px 0;
+    }
 
     &__img {
-        width: 720px;
         height: 534px;
+
+        @include respond(mobile) {
+            max-height: 253px;
+        }
     }
 
     &__text {
-        width: 734px;
+        max-width: 734px;
+        width: 100%;
         text-align: center;
+
+        @include respond(mobile) {
+            max-width: 350px;
+        }
 
         &__title {
             font-family: $font-family-header;
@@ -26,6 +37,11 @@
             font-size: 40px;
             line-height: 60px;
             margin-top: 36px;
+
+            @include respond(mobile) {
+                font-size: 24px;
+                line-height: 36px;
+            }
         }
 
         &__subtitle {
@@ -35,6 +51,11 @@
             margin: 32px auto;
             max-width: 590px;
             font-family: $font-family-body;
+
+            @include respond(mobile) {
+                font-size: 14px;
+                line-height: 21px;
+            }
         }
     }
 }

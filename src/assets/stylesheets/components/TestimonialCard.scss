@@ -1,14 +1,33 @@
 @import "../variables";
+@import "../mixins";
 
 .testimonial__card {
-    max-width: 360px;
+    max-width: 350px;
     width: 100%;
     background-color: $primary-color-testimonials;
     padding: 40px 26px 26px 26px;
+    margin-right: 1rem;
     z-index: 20;
     font-family: $font-family-body;
     box-shadow: 5px 5px 8px 4px rgba(56, 56, 56, 0.0991282);
     border-radius: 3.93258px;
+
+    @include respond(tablet) {
+        margin-bottom: 2rem;
+        margin-right: 0;
+
+    }
+
+    @include respond(mobile) {
+        max-width: 264px;
+        padding: 24px 15px;
+    }
+
+    &:last-child {
+        @include respond(tablet) {
+            margin-bottom: 0;
+        }
+    }
 
 
     &__text {

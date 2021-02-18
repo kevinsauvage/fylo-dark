@@ -7,12 +7,20 @@
     height: 52px;
     margin-top: 73px;
 
+    @include respond(mobile) {
+        margin-top: 24px;
+    }
+
     &__container {
         @include flex-ai-c-jc-sb;
     }
 
     &__logo {
         cursor: pointer;
+
+        @include respond(mobile) {
+            height: 23px
+        }
     }
 
     &__nav {
@@ -28,6 +36,12 @@
                 font-weight: bold;
                 opacity: 0.5;
                 transition: opacity 0.3s ease-in-out;
+
+                @include respond(mobile) {
+                    font-size: 12px;
+                    line-height: 14px;
+                    margin-left: 24px;
+                }
 
                 &:hover {
                     opacity: 1;
