@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/stylesheets/components/Main.scss";
 import Card from "./Card";
 import IconAcces from "../assets/images/icon-access-anywhere.svg";
@@ -14,14 +14,18 @@ import Avatar3 from "../assets/images/profile-3.jpg";
 import Button from "../components/Button";
 
 const Main = () => {
+  const [isEmailNotValid, setIsEmailNotValid] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const input = e.target.querySelector(".mailbox__input");
     if (!/\S+@\S+\.\S+/.test(input.value)) {
       input.style.border = "3px solid red";
+      setIsEmailNotValid(true);
     } else {
       input.style.border = "";
       input.value = "";
+      setIsEmailNotValid(false);
     }
   };
   return (
@@ -99,11 +103,16 @@ const Main = () => {
           type="submit"
           onSubmit={handleSubmit}
           className="mailbox__inputwrapper">
-          <input
-            type="text"
-            placeholder="Example@gmail.com"
-            className="mailbox__input"
-          />
+          <div style={{ position: "relative" }}>
+            <input
+              type="text"
+              placeholder="Example@gmail.com"
+              className="mailbox__input"
+            />
+            {isEmailNotValid ? (
+              <p className="mailbox__alert">Please enter a valid Email</p>
+            ) : null}
+          </div>
           <Button text="Get Started For Free" width="200px" height="48px" />
         </form>
       </div>

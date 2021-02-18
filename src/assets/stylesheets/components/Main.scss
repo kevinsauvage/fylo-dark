@@ -132,9 +132,21 @@
         width: 90%;
     }
 
+    &__alert {
+        position: absolute;
+        bottom: -20px;
+        left: 2rem;
+        font-size: 12px;
+        font-family: $font-family-body;
+        color: $accent-light-red;
+    }
+
     &__inputwrapper {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
         @include respond(tablet) {
-            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -177,8 +189,9 @@
         margin-right: 30px;
         margin-top: 38px;
         color: $primary-color-bg;
-        font-size: 1rem;
-        padding-left: 1rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding-left: 2rem;
         border: none;
 
         @include respond(tablet) {
